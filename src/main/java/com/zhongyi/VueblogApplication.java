@@ -1,4 +1,4 @@
-package com.zhongyi.vueblog;
+package com.zhongyi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
