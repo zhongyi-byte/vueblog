@@ -1,16 +1,16 @@
 package com.zhongyi.common.lang;
 
-import java.io.Serializable;
-
-import javax.print.DocFlavor.STRING;
-
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class Result implements Serializable{
-    private int  code;
-    private String msg ;
+public class Result implements Serializable {
+
+    private int code; // 200是正常，非200表示异常
+    private String msg;
     private Object data;
+
     public static Result succ(Object data) {
         return succ(200, "操作成功", data);
     }
@@ -38,4 +38,5 @@ public class Result implements Serializable{
         r.setData(data);
         return r;
     }
+
 }

@@ -9,6 +9,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * <p>
  * 
@@ -28,10 +30,12 @@ public class User implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
+    @NotNull(message = "昵称不能为空")
     private String username;
 
     private String avatar;
 
+    @NotNull(message = "邮箱不能为空")
     private String email;
 
     private String password;
